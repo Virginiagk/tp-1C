@@ -74,6 +74,7 @@
     font-weight: 200;
     text-align: center;
     margin: 30px;
+    
 }
 
 .textTwo {
@@ -149,12 +150,14 @@ input[type=submit] {
         padding: 20px;
     }
 
-    .contenedorFoto{
-        display: flex;
-    }
-
     .foto img{
         width: 400px;
+    }
+
+    .sectionOne {
+        width: 100%;
+        background-color: #fff;
+        padding-top: 50px;
     }
 
  }
