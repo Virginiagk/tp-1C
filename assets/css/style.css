@@ -74,6 +74,10 @@
     font-weight: 200;
     text-align: center;
     margin: 30px;
+    animation-duration: 3s;
+    animation-name: aparece;
+    animation-iteration-count: infinite;
+    
 }
 
 .textTwo {
@@ -82,6 +86,16 @@
     margin-bottom: 20px;
     text-align: center;
     padding: 0px 50px 50px 50px;
+    
+}
+
+@keyframes aparece {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 input[type=text], select, textarea {
@@ -149,12 +163,14 @@ input[type=submit] {
         padding: 20px;
     }
 
-    .contenedorFoto{
-        display: flex;
-    }
-
     .foto img{
         width: 400px;
+    }
+
+    .sectionOne {
+        width: 100%;
+        background-color: #fff;
+        padding-top: 50px;
     }
 
  }
