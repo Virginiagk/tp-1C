@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 300px auto auto;
+    grid-template-areas: "navbar navbar"
+                         "header header"
+                         "main   main"
+                         "aside  aside"
+                         "footer footer";
+}
+
+/*menu*/
+
+.navbar {
+    grid-area: "navbar";
+    align-items: center;
+    font-weight: 300;
+    font-size: small;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    padding: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar img{
+    width: 100px;
+    margin-left: 10px;
+}
+
+/*menu FIN */
+
+/*banner*/
+.header {
+    grid-area: header;
+}
+
+.header img {
+    width: 100%;
+}
+
+/*banner  FIN */
+
+/*main*/
+.main {
+    grid-area: main;
+    background-color: rgb(255, 234, 234);
+}
+
+.textOne {
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    margin: 30px;
+}
+
+.textTwo {
+    font-weight: 100;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0px 50px 50px 50px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border: solid;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.foto {
+    width: 100%;
+}
+
+.cardContenedor {
+    padding-top: 10px;
+}
+
+/*main FIN */
+
+/*footer */
+.footer {
+    grid-area: footer;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(255, 217, 217);
+}
+
+.footer img {
+    width: 50px;
+}
+
+/*footer FIN */
+
+/*media*/
+
+@media (min-width: 576px) { 
+ 
+    .container {
+        grid-template-columns:(4,1fr);
+        grid-template-rows: 30px 500px auto  auto;
+        grid-template-areas: "navbar navbar navbar navbar"
+                             "header header header header"
+                             "main   main   main   aside "
+                             "footer footer footer footer";
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        font-size: small;
+    }
+    .navbar img{
+        width: 100px;
+    }
+    input[type=text], select, textarea {
+        width: 50%;
+        padding: 20px;
+    }
+    .cardContenedor {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    } 
+
+    .card {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contenedorFoto{
+        display: flex;
+    }
+
+    .foto img{
+        width: 400px;
+    }
+    .textAside {
+        width: 80%;
+        text-align:start;
+        padding: 20px;
+        margin-top: 10px;
+        background-color: rgb(248, 218, 135);
+    }
+    .cardDos {
+        width: 500px;
+        height: 100px;
+        margin: 20px;
+        padding: 50px;
+        background-color: rgb(247, 107, 137);
+    }
+ }
